@@ -1,0 +1,14 @@
+CLOSED                                                         CLOSED
+[CONNECT]                                                      [LISTEN]
+SYN-SENT      --- <SN=0><CTL=SYN><MDL=255> --->                LISTENING
+SYN-SENT      <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---      SYN-RECEIVED
+ESTABLISHED   --- <SN=1><AN=1><CTL=ACK> --->                   SYN-RECEIVED
+ESTABLISHED                                                    ESTABLISHED
+[CLOSE]                                                        [CLOSE]
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               FIN-WAIT
+FIN-WAIT      <--- <SN=1><AN=1><CTL=FIN,ACK> ---               CLOSING # Right state set to "CLOSING" since we went from FIN-WAIT to CLOSING after receiving the FIN ACK
+CLOSING       --- <SN=1><AN=0><CTL=ACK> --->                   CLOSING
+CLOSING       <--- <SN=1><AN=0><CTL=ACK> ---                   TIME-WAIT # Right state set to "TIME-WAIT" since we went from CLOSING to TIME-WAIT after receiving the ACK
+TIME-WAIT                                                      TIME-WAIT
+[WAIT 1000]                                                    [WAIT 1000]
+CLOSED                                                         CLOSED

@@ -1,0 +1,9 @@
+CLOSED                                                         CLOSED
+[CONNECT]                                                      [CONNECT]
+SYN-SENT      --- <SN=0><CTL=SYN><MDL=255> --->                SYN-SENT
+SYN-SENT      <--- <SN=0><CTL=SYN><MDL=255> ---                SYN-RECEIVED
+SYN-RECEIVED  --- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> --->      SYN-RECEIVED
+SYN-RECEIVED  <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---      SYN-RECEIVED
+SYN-RECEIVED   --- <SN=1><AN=1><CTL=ACK> --->                  SYN-RECEIVED
+SYN-RECEIVED  <--- <SN=1><AN=1><CTL=ACK> ---                   ESTABLISHED
+ESTABLISHED                                                    ESTABLISHED

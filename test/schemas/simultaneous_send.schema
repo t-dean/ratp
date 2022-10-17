@@ -1,0 +1,21 @@
+CLOSED                                                               CLOSED
+[CONNECT]                                                            [LISTEN]
+SYN-SENT      --- <SN=0><CTL=SYN><MDL=255> --->                      LISTENING
+SYN-SENT      <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---            SYN-RECEIVED
+ESTABLISHED   --- <SN=1><AN=1><CTL=ACK> --->                         SYN-RECEIVED
+ESTABLISHED                                                          ESTABLISHED
+[SEND "left msg1"]                                                   [SEND "right msg1"]
+[SEND "left msg2"]                                                   [SEND "right msg2"]
+ESTABLISHED   --- <SN=1><AN=1><CTL=ACK,EOR><DATA="left msg1"> --->   ESTABLISHED
+ESTABLISHED  <--- <SN=1><AN=1><CTL=ACK,EOR><DATA="right msg1"> ---   ESTABLISHED
+ESTABLISHED           --- <SN=1><AN=0><CTL=ACK> --->                 ESTABLISHED
+ESTABLISHED           <--- <SN=1><AN=0><CTL=ACK> ---                 ESTABLISHED
+ESTABLISHED           --- <SN=0><AN=0><CTL=ACK> --->                 ESTABLISHED
+ESTABLISHED           <--- <SN=0><AN=0><CTL=ACK> ---                 ESTABLISHED
+ESTABLISHED   --- <SN=0><AN=0><CTL=ACK,EOR><DATA="left msg2"> --->   ESTABLISHED
+ESTABLISHED  <--- <SN=0><AN=0><CTL=ACK,EOR><DATA="right msg2"> ---   ESTABLISHED
+ESTABLISHED           --- <SN=0><AN=1><CTL=ACK> --->                 ESTABLISHED
+ESTABLISHED           <--- <SN=0><AN=1><CTL=ACK> ---                 ESTABLISHED
+ESTABLISHED           --- <SN=1><AN=1><CTL=ACK> --->                 ESTABLISHED
+ESTABLISHED           <--- <SN=1><AN=1><CTL=ACK> ---                 ESTABLISHED
+ESTABLISHED                                                          ESTABLISHED

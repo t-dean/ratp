@@ -1,0 +1,4 @@
+obj/
+bin/
+tags
+compile_commands.json

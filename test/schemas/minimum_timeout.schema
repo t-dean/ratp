@@ -1,0 +1,80 @@
+CLOSED                                                           CLOSED
+[CONNECT]                                                        [LISTEN]
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               LISTENING
+SYN-SENT         <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---     SYN-RECEIVED
+ESTABLISHED      --- <SN=1><AN=1><CTL=ACK> --->                  SYN-RECEIVED
+ESTABLISHED                                                      ESTABLISHED
+[SEND "Hello1"]                                                  []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello1"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello2"]                                                  []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello2"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello3"]                                                  []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello3"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello4"]                                                  []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello4"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello5"]                                                  []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello5"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello6"]                                                  []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello6"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello7"]                                                  []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello7"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello8"]                                                  []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello8"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello9"]                                                  []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello9"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello10"]                                                 []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello10"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello11"]                                                 []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello11"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello12"]                                                 []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello12"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello13"]                                                 []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello13"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello14"]                                                 []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello14"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello15"]                                                 []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello15"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello16"]                                                 []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello16"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello17"]                                                 []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello17"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello18"]                                                 []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello18"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello19"]                                                 []
+ESTABLISHED  --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello19"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "Hello20"]                                                 []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello20"> --->  ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 4]                                                         []
+ESTABLISHED                                                      ESTABLISHED
+[WAIT 1]                                                         []
+ESTABLISHED  --- <SN=0><AN=1><CTL=ACK,EOR><DATA="Hello20"> --->  ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[CLOSE]                                                          []
+FIN-WAIT        --- <SN=1><AN=1><CTL=FIN,ACK> --->               ESTABLISHED
+FIN-WAIT        <--- <SN=1><AN=0><CTL=FIN,ACK> ---               LAST-ACK
+TIME-WAIT          --- <SN=0><AN=0><CTL=ACK> --->                LAST-ACK
+TIME-WAIT                                                        CLOSED
+[WAIT 9]                                                         []
+TIME-WAIT                                                        CLOSED
+[WAIT 10]                                                        []
+CLOSED                                                           CLOSED

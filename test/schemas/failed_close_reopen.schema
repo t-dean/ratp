@@ -1,0 +1,25 @@
+CLOSED                                                         CLOSED
+[CONNECT]                                                      [LISTEN]
+SYN-SENT      --- <SN=0><CTL=SYN><MDL=255> --->                LISTENING
+SYN-SENT      <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---      SYN-RECEIVED
+ESTABLISHED   --- <SN=1><AN=1><CTL=ACK> --->                   SYN-RECEIVED
+ESTABLISHED                                                    ESTABLISHED
+[CLOSE]                                                        []
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               ESTABLISHED
+FIN-WAIT  [x] <--- <SN=1><AN=0><CTL=FIN,ACK> ---               LAST-ACK
+[WAIT 100]                                                     []
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               LAST-ACK
+[WAIT 100]                                                     []
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               LAST-ACK
+[WAIT 100]                                                     []
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               LAST-ACK
+[WAIT 100]                                                     []
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               LAST-ACK
+[WAIT 100]                                                     []
+FIN-WAIT      --- <SN=1><AN=1><CTL=FIN,ACK> --->               LAST-ACK
+[WAIT 100]                                                     []
+CLOSED                                                         LAST-ACK
+[CONNECT]                                                      []
+SYN-SENT      --- <SN=0><CTL=SYN><MDL=255> --->                LAST-ACK
+SYN-SENT      <--- <SN=0><AN=1><CTL=RST,ACK> ---               CLOSED
+CLOSED                                                         CLOSED

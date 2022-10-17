@@ -1,0 +1,33 @@
+CLOSED                                                           CLOSED
+[CONNECT]                                                        [LISTEN]
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               LISTENING
+SYN-SENT         <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---     SYN-RECEIVED
+ESTABLISHED      --- <SN=1><AN=1><CTL=ACK> --->                  SYN-RECEIVED
+ESTABLISHED                                                      ESTABLISHED
+[SEND "Hello"]                                                   []
+ESTABLISHED   --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello"> --->   ESTABLISHED
+ESTABLISHED          <--- <SN=1><AN=0><CTL=ACK> ---              ESTABLISHED
+[SEND "World"]                                                   []
+ESTABLISHED   --- <SN=0><AN=1><CTL=ACK,EOR><DATA="World"> --->   ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 100]                                                       []
+ESTABLISHED   --- <SN=0><AN=1><CTL=ACK,EOR><DATA="World"> --->   ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 100]                                                       []
+ESTABLISHED   --- <SN=0><AN=1><CTL=ACK,EOR><DATA="World"> --->   ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 100]                                                       []
+ESTABLISHED   --- <SN=0><AN=1><CTL=ACK,EOR><DATA="World"> --->   ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 100]                                                       []
+ESTABLISHED   --- <SN=0><AN=1><CTL=ACK,EOR><DATA="World"> --->   ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 100]                                                       []
+ESTABLISHED   --- <SN=0><AN=1><CTL=ACK,EOR><DATA="World"> --->   ESTABLISHED
+ESTABLISHED      [x] <--- <SN=1><AN=1><CTL=ACK> ---              ESTABLISHED
+[WAIT 100]                                                       []
+CLOSED                                                           ESTABLISHED
+[CONNECT]                                                        []
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               ESTABLISHED
+SYN-SENT        <--- <SN=0><AN=1><CTL=RST,ACK> ---               CLOSED
+CLOSED                                                           CLOSED

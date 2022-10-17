@@ -1,0 +1,12 @@
+CLOSED                                                                      CLOSED
+[CONNECT]                                                                   [LISTEN]
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->                          LISTENING
+SYN-SENT         <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---                SYN-RECEIVED
+ESTABLISHED          --- <SN=1><AN=1><CTL=ACK> --->                         SYN-RECEIVED
+ESTABLISHED                                                                 ESTABLISHED
+[SEND "Hello, World!"]                                                      []
+ESTABLISHED   [x] --- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hello, World!"> --->  ESTABLISHED
+[]                                                                          [SEND "Hi"]
+ESTABLISHED      <--- <SN=1><AN=1><CTL=ACK,EOR><DATA="Hi"> ---              ESTABLISHED
+ESTABLISHED    --- <SN=1><AN=0><CTL=ACK,EOR><DATA="Hello, World!"> --->     ESTABLISHED
+ESTABLISHED          <--- <SN=0><AN=0><CTL=ACK> ---                         ESTABLISHED

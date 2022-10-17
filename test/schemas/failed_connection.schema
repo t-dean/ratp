@@ -1,0 +1,23 @@
+CLOSED                                                           CLOSED
+[CONNECT]                                                        [LISTEN]
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               LISTENING
+SYN-SENT   [x]  <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---      SYN-RECEIVED
+[WAIT 100]                                                       []
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               SYN-RECEIVED
+SYN-SENT         [x]  <--- <SN=0><AN=1><CTL=ACK> ---             SYN-RECEIVED
+[WAIT 100]                                                       []
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               SYN-RECEIVED
+SYN-SENT         [x]  <--- <SN=0><AN=1><CTL=ACK> ---             SYN-RECEIVED
+[WAIT 100]                                                       []
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               SYN-RECEIVED
+SYN-SENT         [x]  <--- <SN=0><AN=1><CTL=ACK> ---             SYN-RECEIVED
+[WAIT 100]                                                       []
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               SYN-RECEIVED
+SYN-SENT         [x]  <--- <SN=0><AN=1><CTL=ACK> ---             SYN-RECEIVED
+[WAIT 100]                                                       []
+SYN-SENT         --- <SN=0><CTL=SYN><MDL=255> --->               SYN-RECEIVED
+SYN-SENT         [x]  <--- <SN=0><AN=1><CTL=ACK> ---             SYN-RECEIVED
+[WAIT 100]                                                       [WAIT 100]
+CLOSED          <--- <SN=0><AN=1><CTL=SYN,ACK><MDL=255> ---      SYN-RECEIVED
+CLOSED                  --- <SN=1><CTL=RST> --->                 SYN-RECEIVED
+CLOSED                                                           LISTENING
